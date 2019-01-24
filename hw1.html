@@ -1,0 +1,25 @@
+<script>
+
+low = 1
+high = 100
+guess = (low+high)/2
+
+user = prompt("Is your number 50?")
+while ( user != "yes")
+{ 
+	if (user == ">")
+	{
+		low = guess
+	}
+	if (user == "<") 
+	{
+		high = guess
+	}
+	
+	guess = (low+high)/2
+	
+	user = prompt("Is your number "+guess) 
+	
+}
+
+alert("I won!")
