@@ -5,14 +5,29 @@ outtext = ""
 
 for(i=0;i<intext.length;i++) 
 {
-	alert(i + " out of " + intext.length + " word " + intext);
 	x = intext.charCodeAt(i)
-	alert("Unshifted " + x);
-	if((x >= 65 && x <= 90) || (x >=97 && 122))
+	
+	if((x >= 65 && x <= 90))
+	{
+		x -= 65;
+		
 		x += shift;
-	alert("Shifted" + x);
-	outtext += String.fromCharCode(x);
+		x = x%26;
+		
+		x += 65;
+	}
+	if(x >=97 && x <= 122)
+	{
+		x -= 97
+		
+		x += shift
+		x = x % 26
+		
+		x += 97
+	}
+	
+	outtext += String.fromCharCode(x)
 	
 }
-alert(outtext);
+alert(outtext)
 </script> 
