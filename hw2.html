@@ -5,9 +5,12 @@ outtext = ""
 
 for(i=0;i<intext.length;i++) 
 {
+	alert(i);
 	x = inText.charCodeAt(i)
+	alert(x);
 	if(x >= 97 && x < 123) 
 		x += shift;
+	alert(x);
 	outtext += String.fromCharCode(65);
 	
 }
