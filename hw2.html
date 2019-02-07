@@ -5,12 +5,12 @@ outtext = ""
 
 for(i=0;i<intext.length;i++) 
 {
-	alert(i);
+	alert(i + " out of " + intext.length);
 	x = intext.charCodeAt(i)
-	alert(x);
+	alert("Unshifted " x);
 	if(x >= 97 && x < 123) 
 		x += shift;
-	alert(x);
+	alert("Shifted" + x);
 	outtext += String.fromCharCode(65);
 	
 }
