@@ -3,31 +3,37 @@
 function process() 
 {
   x = document.getElementById("input").value
-  y = x.toLowerCase()
   
-  wordsEntered = y.split(" ");
+  
+  wordsEntered = x.split(" ");
   output = "";
   
   for(i=0; i<wordsEntered.length;i++)
   {
-  		if(wordsEntered[i] == 'a' && (i+1) < wordsEntered.length)
+  		if((wordsEntered[i] == 'a' || wordsEntered[i] == 'A') && (i+1) < wordsEntered.length)
   		{	
   			firstLetter = wordsEntered[i+1].charAt(0);
-  			if(firstLetter == 'a' || firstLetter == 'e' || firstLetter == 'i' || firstLetter == 'o' || firstLetter == 'u')
-  				output += " an";
-  			else
-  				output += " a"
-  		
+  			if(firstLetter == 'a' || firstLetter == 'e' || firstLetter == 'i' || firstLetter == 'o' || firstLetter == 'u' ||
+  			   firstLetter == 'A' || firstLetter == 'E' || firstLetter == 'I' || firstLetter == 'O' || firstLetter == 'U')
+  			{
+  				wordsEntered[i] += 'n'
+  
+  			}
+  			
+  			
+  			output += ' ' + wordsEntered[i];
   				
   		}
   		else if(wordsEntered[i] == 'an' && (i+1) < wordsEntered.length)
   		{
   			firstLetter = wordsEntered[i+1].charAt(0);
-  			if(firstLetter != 'a' && firstLetter != 'e' && firstLetter != 'i' && firstLetter != 'o' && firstLetter != 'u')
-  				output += " a"
-  			else
-  				output += " an"
+  			if(firstLetter != 'a' && firstLetter != 'e' && firstLetter != 'i' && firstLetter != 'o' && firstLetter != 'u' &&
+  			   firstLetter != 'A' && firstLetter != 'E' && firstLetter != 'I' && firstLetter != 'O' && firstLetter != 'U')
+  			{
+  				wordsEntered[i] = wordsEntered[i].charAt(0);
+  			}
   		}
+  		
   		else
   		{
   			output += ' ' + wordsEntered[i];
