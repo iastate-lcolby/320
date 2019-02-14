@@ -1,0 +1,36 @@
+<script src="https://linguatorium.com/tools/static/320/tau.js"></script>
+<script src="https://linguatorium.com/tools/static/320/grammar.js"></script>
+<p>Input:<br><textarea id="input" rows="10" cols="80"></textarea>
+<p><button onclick="process()">Process</button>
+<p>Output:<br><textarea id="output" rows="10" cols="80"></textarea>
+
+<script>
+
+function process() 
+{
+  x = document.getElementById("input").value
+  y = x.toLowerCase()
+  
+  wordsEntered = y.split(" ");
+  output = "";
+  
+  for(i=0; i<wordsEntered.length;i++)
+  {
+  		if(wordsEntered[i] == 'a' && (i+1) < wordsEntered.length)
+  		{	
+  			firstLetter = wordsEntered[i+1].charAt(0);
+  			if(firstLetter == 'a' || firstLetter == 'e' || firstLetter == 'i' || firstLetter == 'o' || firstLetter == 'u')
+  				output += " an";
+  			else
+  				output += " a"
+  		
+  				
+  		}
+  		else
+  		{
+  			output += ' ' + wordsEntered[i];
+  		}   
+  }
+  
+  document.getElementById("output").value = output
+}
