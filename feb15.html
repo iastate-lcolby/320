@@ -1,0 +1,10 @@
+<p id="some">Hello</p>
+<input id="trans" value="Translate" type="button">
+
+<script>
+   $('#trans').click(function() {
+     google.language.translate($('#some').html(), 'en', 'fr', function(result) {
+         $('#some').html(result.translation);
+     });
+   });
+</script>
