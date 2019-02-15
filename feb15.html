@@ -1,22 +1,11 @@
-<p>Input:<br><textarea id="input" rows="10" cols="80"></textarea>
-<input id="trans" value="Translate" type="button">
-<p>Output:<br><textarea id="output" rows="10" cols="80"></textarea>
 <script>
 
-function process() 
-{
-  x = document.getElementById("input").value
-  
-  
-  wordsEntered = x.split(" ");
-  output = "";
-  
+	translations = { "hello" : "hola" , "goodbye" : "adios" , "green" : "verde" , "red" : "rojo" }
 
-   $('#trans').click(function() {
-     google.language.translate($('#some').html(), 'en', 'fr', function(result) {
-         $('#some').html(result.translation);
-     });
-   });
+	x = prompt("Enter a word in English")
 
+	y = translations[x]
+	
+	alert(y)
 
 </script>
