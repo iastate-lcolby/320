@@ -26,13 +26,10 @@ function process() {
       }
       else
       {
-      	//Calculate the distance between englishword and current word
       	distance = editing_distance(english_words[j], current_word)
     
-    
       	if(distance < minDistance || minDistance == -1)
-      	{
-    		//We have found a new best canidate 
+      	{ 
       		minDistance = distance;
       		minDistanceWord = english_words[j];
       	}
