@@ -20,7 +20,6 @@ for(i=0; i<words.length; i++)
 	{
 		counts[words[i]] = 1
 	}
-	
 	else
 	{
 		counts[words[i]] ++ 
@@ -29,7 +28,7 @@ for(i=0; i<words.length; i++)
 
   y = JSON.stringify(counts, null, 2)
   
-  sorted = Object.keys(counts).sort(function(a,b)(return counts[b]-counts[a]))
+  sorted = Object.keys(counts).sort(function(a,b){return counts[b]-counts[a]})
   y += sorted
   
    
