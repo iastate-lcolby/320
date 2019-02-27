@@ -1,3 +1,8 @@
+<p>Input:<br><textarea id="input" rows="10" cols="80"></textarea>
+<p><button onclick="process()">Process</button>
+<p>Output:<br><textarea id="output" rows="10" cols="80"></textarea>
+
+
 <script>
 
 function process() 
@@ -6,7 +11,7 @@ function process()
  
   x = x.replace(/\W+/g, " ").toLowerCase().trim() 
 
-words = x.split("")
+words = x.split(" ")
 counts = {}
 
 for(i=0; i<words.length; i++)
@@ -32,7 +37,3 @@ for(i=0; i<words.length; i++)
 }
 
 </script>
-
-<p>Input:<br><textarea id="input" rows="10" cols="80"></textarea>
-<p><button onclick="process()">Process</button>
-<p>Output:<br><textarea id="output" rows="10" cols="80"></textarea>
