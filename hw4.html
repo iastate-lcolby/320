@@ -1,0 +1,29 @@
+<p>Input:<br><textarea id="input" rows="10" cols="80"></textarea>
+<p><button onclick="process()">Process</button>
+<p>Output:<br><textarea id="output" rows="10" cols="80"></textarea>
+
+<script>
+
+words = x.split("")
+counts = {}
+
+for(i=0; i<words.length; i++)
+{
+	if(!counts[words[i]])
+	{
+		counts[words[i]] = 1
+	}
+	
+	else
+	{
+		counts[words[i]] ++ 
+	}
+
+function process() 
+{
+  x = document.getElementById("input").value
+  y = x.toLowerCase()
+  document.getElementById("output").value = y
+}
+
+</script>
